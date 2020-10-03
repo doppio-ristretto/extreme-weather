@@ -1,12 +1,12 @@
-url = "http://localhost:27017/firezones";
+url = "http://127.0.0.1:5000/data";
 
 zones = [];
 
 
-d3.json(url).then((data) => {
-    // console.log(data);
-    data2 = data.features;
-    // console.log(data2);
+d3.json(url).then(data => {
+    console.log(data);
+    data2 = data[0].features;
+    console.log(data2);
     data2.forEach((row, i) => {
         activeZones = row.properties.affectedZones;
         // console.log(affectedZones);
@@ -16,9 +16,8 @@ d3.json(url).then((data) => {
             zones.push(row2);
         })
     });
-
     console.log(zones);
 })
 
-d3.selectAll("body").append("div").text("test");
+// d3.selectAll("body").append("div").text("test");
 
