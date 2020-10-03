@@ -19,5 +19,9 @@ d3.json(url).then(data => {
     console.log(zones);
 })
 
-// d3.selectAll("body").append("div").text("test");
+zones.forEach((row, index) => {
+    var test = d3.select("body")
+    test.append("div").text(zones[index])
+})
+d3.select("body").append("div").text("test");
 
