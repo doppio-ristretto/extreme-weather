@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content ="ie-edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"></link>
+    <title>My chart.js Chart</title>
+</head>
+<body>
+    <!--Navbar adjustments-->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">               
+            <a class="navbar-brand" href="index.html" >ABOUT</a>
+        
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">    
+                    <li class="nav-item">
+                        <a class="nav-link" href ="test.html">WILDFIRE MAP</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="plots.html">VISUALIZATIONS</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class = "container">
+        <canvas id="myChart" width="400" height="400"></canvas>
+    </div>
+    <script>
+        let mychart = document.getElementById("myChart").getContext('2d');
+        
+        let DMCchart = new Chart (myChart, {
+            type:'bar',
+            data: {
+                    labels: ["Jan","Feb","Mar","Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], //x-axis,
+                    datasets: [{
+                        label: 'Duff Moisture Code',
+                        data: [2.40, 9.47, 34.54, 15.91, 26.77, 93.38, 110.39, 153.73, 120.922, 41.42, 3.00, 26.122],
+                        backgroundColor:'green',
+                        borderWidth: 1
+                    }]
+            },
+            options:{
+                scales:{
+                    yAxis: [{
+                        ticks:{
+                            beginAtZero:true
+                        }
+                    }]
+                }
+            }
+        });
+
+        let FFMCchart = new Chart (myChart, {
+            type: 'horizontalbar',
+            data: {
+                    labels: ["Jan","Feb","Mar","Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], //x-axis
+                    label: "Fine Fuel Moisture Code",
+                    datasets: [50.40, 82.90, 89.44, 85.79, 87.35, 89.42, 91.32, 92.34, 91.24, 90.45, 79.50, 84.97],
+                    backgroundColor:'blue ',
+                },
+                options:options
+        });
+    </script>
+</body>
+</html>
