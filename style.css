@@ -1,0 +1,66 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#page {
+  display:table;
+  border-spacing:0;
+  width: 100%;
+  height:100%;
+}
+
+#sidebar, #map {
+display: table-cell;
+width:50%;
+bottom: 0;
+position: absolute;
+top:0;
+}
+
+#sidebar {
+  background-color:antiquewhite;
+  left: 0;
+  right: 50% 
+}
+
+#map { 
+  overflow:hidden;
+  right:0;
+}
+
+#header {
+  display:table-row;
+}
+
+.container {
+  width:130%;
+}
+
+#border {
+  border-width: 2px;
+  border-style: solid;
+  color: gray;
+  padding-left:10px;
+  padding-top:5px;
+  padding-bottom:5px;
+  padding-right:10px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+.heading,
+body,
+html {
+  height: 100%;
+}
+
+#map {
+  height:70%;
+  width: 50%;
+}
