@@ -2,15 +2,63 @@ body {
   padding: 0;
   margin: 0;
 }
-
 .heading,
 body,
 html {
   height: 100%;
 }
-
 #map,
 body,
 html {
   height: 100%;
+}
+.legend .future {
+  color:blue;
+}
+.legend .unkown {
+  color: grey;
+}
+.legend .expected {
+  color: green;
+}
+.legend .immediate {
+  color: red;
+}
+/* 
+.legend i {
+  width: 18px;
+  height: 18px;
+  float: left;
+  margin-right: 8px;
+  opacity: 0.7;
+} */
+.legend {
+  padding: 6px 8px;
+  font: 16px Arial, Helvetica, Times;
+  font-weight: bold;
+  color: black;
+  background: #fff;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+/* .legend .Unkown {
+  float: left;
+  padding-bottom: 5px;
+} */
+/* 
+.legend .Future {
+  float: right;
+} */
+.Unkown {
+  color: grey
+}
+.Future {
+  color: blue
+}
+.Expected {
+  color: green
+}
+.Immediate {
+  color: red
 }

@@ -81,7 +81,7 @@ d3.json(url).then(data => {
       description = properties.description
       instruction = properties.instruction
       parameters = properties.parameters
-      console.log(eventtype)
+
       
 
     activeZones.forEach(row2=>{
@@ -108,17 +108,18 @@ d3.json(url).then(data => {
               layer.bindPopup(eventtype);           
           } 
         })
-        d3.json(url2).then(data2=> {
-          console.log(data2);
-            var fireLayer = L.geoJson(data2, {
-              style: function(feature) {
-                return {
-                    color: "red"
-                };
-              }
-          })
-          insertMap(alertLayer,fireLayer)
-        })
+        // d3.json(url2).then(data2=> {
+        //   console.log(data2);
+        //     var fireLayer = L.geoJson(data2, {
+        //       style: function(feature) {
+        //         return {
+        //             color: "red"
+        //         };
+        //       }
+        //   })
+        //   insertMap(alertLayer, fireLayer)
+        // })
+        insertMap(alertLayer, alertLayer)
       })
     })
   })
