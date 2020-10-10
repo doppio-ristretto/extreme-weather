@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content ="ie-edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"></link>
+    <title>My chart.js Chart</title>
+</head>
+<body>
+    <!--Navbar adjustments-->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">               
+            <a class="navbar-brand" href="http://127.0.0.1:5000/" >HOME</a>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">    
+                    <li class="nav-item">
+                        <a class="nav-link" href ="http://127.0.0.1:5000/map">Map</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://127.0.0.1:5000/chart">Chart</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://127.0.0.1:5000/data">Alert Data</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://127.0.0.1:5000/data2">Fire Data</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class = "container">
+        <canvas id="myChart" width="400" height="400"></canvas>
+    </div>
+    <script>
+        let mychart = document.getElementById("myChart").getContext('2d');
+        
+        let Droughtchart = new Chart (myChart, {
+            type:'bar',
+            data: {
+                    labels: ["Jan","Feb","Mar","Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], //x-axis,
+                    datasets: [{
+                        label: 'Average Drought',
+                        data: [90.35, 54.67, 75.94, 48.56, 93.75, 297.71, 450.60, 641.10, 734.61, 681.67, 106.70, 351.24],
+                        backgroundColor:'green',
+                        borderWidth: 1
+                    }]
+            },
+            options:{
+                scales:{
+                    yAxis: [{
+                        ticks:{
+                            beginAtZero:true
+                        }
+                    }]
+                }
+            }
+        });
+
+        // let FFMCchart = new Chart (myChart, {
+        //     type: 'horizontalbar',
+        //     data: {
+        //             labels: ["Jan","Feb","Mar","Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], //x-axis
+        //             label: "Fine Fuel Moisture Code",
+        //             datasets: [50.40, 82.90, 89.44, 85.79, 87.35, 89.42, 91.32, 92.34, 91.24, 90.45, 79.50, 84.97],
+        //             backgroundColor:'blue ',
+        //         },
+        //         options:options
+        // });
+    </script>
+</body>
+</html>

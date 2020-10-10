@@ -62,3 +62,15 @@ html {
 .Immediate {
   color: red
 }
+p {
+  margin-left: 10px;
+}
+
+h4 {
+  margin-left: 10px;
+}
+
+li {
+  margin-left: 10px;
+}
+}

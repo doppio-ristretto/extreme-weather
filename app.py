@@ -45,6 +45,13 @@ def index():
 def index2():
     return gj
 
+@app.route("/chart", methods = ['GET'])
+def index3():
+    return render_template("chart.html")
+
+@app.route("/map", methods = ['GET'])
+def index4():
+    return render_template("map.html")
 
 
 if __name__ == "__main__":
