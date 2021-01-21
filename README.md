@@ -5,3 +5,9 @@ The purpose of this group project is to build a website that can warn users abou
 
 ## Methods
 The website was built by using html, css, js along with d3, Flask, Pymongo, chart.js, Leaflet and Mapbox libraries. First the alert data was obtained from National Weather Service API and the fire data was obtained from NIFC API. Then the following data was stored using Pymongo. Lastly, Flask was used to plot these data on the interactive map and chart.js was used to plot drought by month bar chart.
+
+
+## Preview
+The website link is not available due to the size of the data, but the preview is shown below:
+
+![](weather.gif)
