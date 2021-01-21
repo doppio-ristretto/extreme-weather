@@ -1,22 +1,26 @@
 url = "http://127.0.0.1:5000/data";
 url2 = "http://127.0.0.1:5000/data2";
 
-getData()
 
 var alertLayers = L.layerGroup([]);
 
-var myMap = L.map("map", {
-    center: [53.5, -98.35],
-    zoom:4,
-    maxZoom: 7,
-    layers: [alertLayers]
-});
 
+getData()
+
+var myMap = L.map("map", {
+  center: [53.5, -98.35],
+  zoom:4,
+  maxZoom: 7,
+  layers: [alertLayers]
+});
 
 
 
 function insertMap(alertLayer, fireLayer) {
 
+
+  
+  
     // Adding tile layer
     var darkmap = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
       attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
